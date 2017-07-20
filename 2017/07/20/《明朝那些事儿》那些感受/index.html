@@ -6,21 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/Jomsou/Jomsou.github.io.git">
-  <title>使用ARM NEON Intrinsics加速 | Jomsou&#39;s Blog</title>
+  <title>《明朝那些事儿》那些感受 | Jomsou&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ARM NEON技术是ARM Cortex-A系列和Cortex-R52处理器的SIMD（单指令多数据）架构扩展。 NEON技术旨在通过加速音视频编码/解码，用户界面，2D / 3D图形或游戏来改善多媒体用户体验。NEON还可以加速信号处理算法和功能，加快音频和视频处理，语音和面部识别，计算机视觉和深度学习等应用。官方网站为NEON-ARM开发者。 概述NEON技术是一个封装的SIMD架构。NEO">
-<meta name="keywords" content="neon,arm">
+  <meta name="description" content="本文分别写于 2014-12-12 22:49（首）与 2014-12-15 22:26（续），在QQ空间，今做整理，虽很粗糙，却记录年华，仅作怀念！  ### （首）  #### 说实在，我写这篇随笔的目的不是为了说明我的文笔有多好，只是看了《明朝》二的前五节有点小激动罢，也是为自己的读书笔记正式开个好头 罢。说起《明朝》，其实自己在高中就知道了，那时是在一家小书店里接触的，但是也算是被它不同">
+<meta name="keywords" content="随笔">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用ARM NEON Intrinsics加速">
-<meta property="og:url" content="https://github.com/Jomsou/Jomsou.github.io.git/2017/07/09/neon/index.html">
+<meta property="og:title" content="《明朝那些事儿》那些感受">
+<meta property="og:url" content="https://github.com/Jomsou/Jomsou.github.io.git/2017/07/20/《明朝那些事儿》那些感受/index.html">
 <meta property="og:site_name" content="Jomsou&#39;s Blog">
-<meta property="og:description" content="ARM NEON技术是ARM Cortex-A系列和Cortex-R52处理器的SIMD（单指令多数据）架构扩展。 NEON技术旨在通过加速音视频编码/解码，用户界面，2D / 3D图形或游戏来改善多媒体用户体验。NEON还可以加速信号处理算法和功能，加快音频和视频处理，语音和面部识别，计算机视觉和深度学习等应用。官方网站为NEON-ARM开发者。 概述NEON技术是一个封装的SIMD架构。NEO">
-<meta property="og:image" content="https://github.com/img/neon/Q0.png">
-<meta property="og:updated_time" content="2017-07-16T14:04:29.000Z">
+<meta property="og:description" content="本文分别写于 2014-12-12 22:49（首）与 2014-12-15 22:26（续），在QQ空间，今做整理，虽很粗糙，却记录年华，仅作怀念！  ### （首）  #### 说实在，我写这篇随笔的目的不是为了说明我的文笔有多好，只是看了《明朝》二的前五节有点小激动罢，也是为自己的读书笔记正式开个好头 罢。说起《明朝》，其实自己在高中就知道了，那时是在一家小书店里接触的，但是也算是被它不同">
+<meta property="og:updated_time" content="2017-07-20T08:33:38.616Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用ARM NEON Intrinsics加速">
-<meta name="twitter:description" content="ARM NEON技术是ARM Cortex-A系列和Cortex-R52处理器的SIMD（单指令多数据）架构扩展。 NEON技术旨在通过加速音视频编码/解码，用户界面，2D / 3D图形或游戏来改善多媒体用户体验。NEON还可以加速信号处理算法和功能，加快音频和视频处理，语音和面部识别，计算机视觉和深度学习等应用。官方网站为NEON-ARM开发者。 概述NEON技术是一个封装的SIMD架构。NEO">
-<meta name="twitter:image" content="https://github.com/img/neon/Q0.png">
+<meta name="twitter:title" content="《明朝那些事儿》那些感受">
+<meta name="twitter:description" content="本文分别写于 2014-12-12 22:49（首）与 2014-12-15 22:26（续），在QQ空间，今做整理，虽很粗糙，却记录年华，仅作怀念！  ### （首）  #### 说实在，我写这篇随笔的目的不是为了说明我的文笔有多好，只是看了《明朝》二的前五节有点小激动罢，也是为自己的读书笔记正式开个好头 罢。说起《明朝》，其实自己在高中就知道了，那时是在一家小书店里接触的，但是也算是被它不同">
   
     <link rel="alternative" href="/atom.xml" title="Jomsou&#39;s Blog" type="application/atom+xml">
   
@@ -168,122 +166,37 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-neon" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-《明朝那些事儿》那些感受" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      使用ARM NEON Intrinsics加速
+      《明朝那些事儿》那些感受
     </h1>
   
 
         
-        <a href="/2017/07/09/neon/" class="archive-article-date">
-  	<time datetime="2017-07-09T13:35:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-09</time>
+        <a href="/2017/07/20/《明朝那些事儿》那些感受/" class="archive-article-date">
+  	<time datetime="2017-07-20T08:17:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>ARM NEON技术是ARM Cortex-A系列和Cortex-R52处理器的SIMD（单指令多数据）架构扩展。 NEON技术旨在通过加速音视频编码/解码，用户界面，2D / 3D图形或游戏来改善多媒体用户体验。NEON还可以加速信号处理算法和功能，加快音频和视频处理，语音和面部识别，计算机视觉和深度学习等应用。官方网站为<a href="https://developer.arm.com/technologies/neon" target="_blank" rel="external">NEON-ARM开发者</a>。</p>
-<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>NEON技术是一个封装的SIMD架构。NEON寄存器被认为是相同数据类型元素的向量。该技术支持多种数据类型。下表描述了不同架构版本支持的数据类型。</p>
-<table>
-<thead>
-<tr>
-<th>-</th>
-<th>ARMv7-A/R</th>
-<th>ARMv8-A/R</th>
-<th>RMv8-A  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>-</td>
-<td>-</td>
-<td>AArch32</td>
-<td>AArch64</td>
-</tr>
-<tr>
-<td>Floating-point</td>
-<td>32-bit</td>
-<td>16-bit*/32-bit</td>
-<td>16-bit*/32-bit/64-bit</td>
-</tr>
-<tr>
-<td>Integer</td>
-<td>8-bit/16-bit/32-bit</td>
-<td>8-bit/16-bit/32-bit/64-bit</td>
-<td>8-bit/16-bit/32-bit/64-bit</td>
-</tr>
-</tbody>
-</table>
-<a id="more"></a>
-<h2 id="如何使用NEON？"><a href="#如何使用NEON？" class="headerlink" title="如何使用NEON？"></a>如何使用NEON？</h2><p>有关NEON编程的详细信息，可以参考<a href="https://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.den0018a/index.html" target="_blank" rel="external"> NEON Programmers Guide</a>。官网文档需要注册ARM开发者账号才可以下载，所以可以去CSDN<a href="http://download.csdn.net/download/qq_28719969/9426692" target="_blank" rel="external">下载</a>。</p>
-<h2 id="NEON基本知识"><a href="#NEON基本知识" class="headerlink" title="NEON基本知识"></a>NEON基本知识</h2><h4 id="NEON的寄存器"><a href="#NEON的寄存器" class="headerlink" title="NEON的寄存器"></a>NEON的寄存器</h4><ul>
-<li>16个128-bit Q(quadword)寄存器，Q0-Q15.</li>
-<li>32个64-bit D(doubleword)寄存器，D0-D31. (16个64-bit D寄存器 for VFPv3-D16.) <ul>
-<li>D寄存器和Q寄存器的映射关系为:Q<n>为D<2n>和D<2n+1>的组合。</2n+1></2n></n></li>
-</ul>
-</li>
-</ul>
-<p>具体关系如下图所示。<br><img src="/img/neon/Q0.png" alt="image"></p>
-<h4 id="NEON的数据类型"><a href="#NEON的数据类型" class="headerlink" title="NEON的数据类型"></a>NEON的数据类型</h4><table>
-<thead>
-<tr>
-<th>-</th>
-<th>8-bit</th>
-<th>16-bit</th>
-<th>32-bit</th>
-<th>64-bit</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Unsigned integer</td>
-<td>U8</td>
-<td>U16</td>
-<td>U32</td>
-<td>U64</td>
-</tr>
-<tr>
-<td>Signed integer</td>
-<td>S8</td>
-<td>S16</td>
-<td>S32</td>
-<td>S64</td>
-</tr>
-<tr>
-<td>Integer of unspecified type</td>
-<td>I8</td>
-<td>I16</td>
-<td>I32</td>
-<td>I64</td>
-</tr>
-<tr>
-<td>Floating-point number</td>
-<td>not available</td>
-<td>F16</td>
-<td>F32 or F</td>
-<td>not available</td>
-</tr>
-<tr>
-<td>Polynomial over {0,1}</td>
-<td>P8</td>
-<td>P16</td>
-<td>not available</td>
-<td>not available</td>
-</tr>
-</tbody>
-</table>
-<h2 id="NEON-Intrinsics"><a href="#NEON-Intrinsics" class="headerlink" title="NEON Intrinsics"></a>NEON Intrinsics</h2><p>NEON Intrinsics是编译器使用适当的NEON指令或NEON指令序列替换的函数调用。Intrinsics提供与编写汇编语言几乎一样多的指令，但是将寄存器分配给编译器，以便开发人员可以专注于算法。它还可以执行指令调度以消除指定目标处理器的流水线停顿。这样可以开发比使用汇编语言更可维护的源代码。</p>
-<h4 id="NEON-Intrinsics举例"><a href="#NEON-Intrinsics举例" class="headerlink" title="NEON Intrinsics举例"></a>NEON Intrinsics举例</h4><p>原代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">#include &lt;stdio.h&gt;</div><div class="line">#include &lt;arm_neon.h&gt;</div><div class="line">unsigned short int A[] = &#123;1,2,3,4&#125;; // array with 4 elements</div><div class="line">int main(void)</div><div class="line">&#123;</div><div class="line">    for(int i=0;i&lt;4;++i)</div><div class="line">    &#123;</div><div class="line">        A[i]+=A[i];</div><div class="line">    &#125;</div><div class="line">    return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>NEON Intrinsics代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">#include &lt;stdio.h&gt;</div><div class="line">#include &lt;arm_neon.h&gt;</div><div class="line">unsigned short int A[] = &#123;1,2,3,4&#125;; // array with 4 elements</div><div class="line">int main(void)</div><div class="line">&#123;</div><div class="line">    uint16x4_t v; // declare a vector of four 16-bit lanes</div><div class="line">    v = vld1_u16(A); // load the array from memory into a vector</div><div class="line">    v = vadd_u16(v,v); // double each element in the vector</div><div class="line">    vst1_u16(A, v); // store the vector back to memory</div><div class="line">    return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>这个例子中A是无符号短整型数组，ushort为16位，数组长度为4，所以vld1_u16(A) 可以把整个数组load到4通道x16位的向量中,通过vadd_u16使每个通道进行加法，vst1_u16把v中数据存回A中。<br>关于详细的NEON Intrinsics编程信息，可以看这-&gt;<a href="https://developer.arm.com/technologies/neon/intrinsics" target="_blank" rel="external"><strong>ARM NEON Intrinsics参考</strong></a>。</p>
-<h2 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h2><p><a href="http://developer.arm.com/technologies/neon" target="_blank" rel="external">https://developer.arm.com/technologies/neon</a><br><a href="https://developer.arm.com/docs/den0018/latest/neontm-version-10-programmers-guide" target="_blank" rel="external">https://developer.arm.com/docs/den0018/latest/neontm-version-10-programmers-guide</a></p>
+        <blockquote>
+<p>本文分别写于 2014-12-12 22:49（首）与 2014-12-15 22:26（续），在QQ空间，今做整理，虽很粗糙，却记录年华，仅作怀念！</p>
+</blockquote>
+<pre><code>### （首）
+ #### 说实在，我写这篇随笔的目的不是为了说明我的文笔有多好，只是看了《明朝》二的前五节有点小激动罢，也是为自己的读书笔记正式开个好头
+</code></pre><p>罢。说起《明朝》，其实自己在高中就知道了，那时是在一家小书店里接触的，但是也算是被它不同于其他的历史著作的题目还有就是作者笔名当年明<br>月。本身自己也较喜欢历史著作，《明朝》是不是完全符合历史便没去深究了。不过后来，我学会怎么在网上下载电子书，便下载了《明朝》，可惜只看<br>可一点，便因为课内学习没空去看，怎么说呢？过去看这样的书都会被老师看做是不好的。</p>
+<pre><code>#### 直到今天在图书馆碰到，终于真正拜读了几节。本书开头毛佩琦就以不同寻常的方式作序——作者当年明月在朦胧中又是遇到朱重八，又是朱棣……颇
+</code></pre><p>有穿越的意味。总的来说，作者以生动犀利的文笔刻画出各人物性格特征，而且带现代口吻讲明一些关系等，使文章具有通俗易懂，趣味性。就例如第一<br>节帝王的烦恼将朱棣比作董事长，将藩王比作董事会等等。<br>     第一节是帝王的烦恼，朱棣成功打败他的侄子朱允炆作了皇帝，结果在找朱允炆的人或尸体时什么找不到。于是他十分害怕侄子回来，毕竟自己是叛<br>贼，侄子还有朝中很多忠臣。于是乎，他只能作两件事:一，召告朱允炆已死，让旧臣死了这条心。二，命史官将自己写成是马皇后所生，这么就是嫡子了，<br>其实从史料分析可知，他并非马皇后所生，而是石贡妃所生。后来，他只能派人暗自查明惠帝朱允炆的下落。</p>
+<pre><code>### （续）
+说真的，虽然最近几天有点触景生情，有点物是人非的感觉。不过还 好，有《明朝》陪着我这孤寂之人度 过又一夜晚。我想在此处应该向当年明月
+</code></pre><p>致敬。《明朝》可以算是寂寞中陪伴之知己。很高兴能拜读至第190页，很高兴 能领阅当年明月的幽默，潜显易懂。 “先生”加之于朱棣等前，他用幽默的<br>语 句把朱高煦这个阴谋家的失败写的十 分精彩，使读者印象深刻。至于皇宫 中皇子之间的尔虞我诈能给人一种身 临其境。还有，关于朱棣的那场三线<br>作战甚是精彩，令人回味无穷。还有……暂时无法继续列举，有待后来补充。                                                                                                由于读的较快，没来得及作笔 记，因此只能等后来再作这事罢。</p>
 
       
 
@@ -297,11 +210,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">neon</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">arm</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
         		</li>
       		
 		</ul>
@@ -357,7 +266,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://github.com/Jomsou/Jomsou.github.io.git/2017/07/09/neon/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://github.com/Jomsou/Jomsou.github.io.git/2017/07/20/《明朝那些事儿》那些感受/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -371,18 +280,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2017/07/16/livere/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          为Hexo主题yilia添加livere(来必力)评论支持
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/07/09/hexogithub/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">用Hexo在GitHub上搭建个人博客</div>
+    <a href="/2017/07/20/菜鸟小白的web前端开发的路线规划-md/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">菜鸟小白的web前端开发的路线规划</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -409,7 +309,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概述"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何使用NEON？"><span class="toc-number">2.</span> <span class="toc-text">如何使用NEON？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NEON基本知识"><span class="toc-number">3.</span> <span class="toc-text">NEON基本知识</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#NEON的寄存器"><span class="toc-number">3.0.1.</span> <span class="toc-text">NEON的寄存器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#NEON的数据类型"><span class="toc-number">3.0.2.</span> <span class="toc-text">NEON的数据类型</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NEON-Intrinsics"><span class="toc-number">4.</span> <span class="toc-text">NEON Intrinsics</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#NEON-Intrinsics举例"><span class="toc-number">4.0.1.</span> <span class="toc-text">NEON Intrinsics举例</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料："><span class="toc-number">5.</span> <span class="toc-text">参考资料：</span></a></li></ol>
+                    目录，不存在的…
                     </div>
                 </span>
             </div>

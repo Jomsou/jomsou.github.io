@@ -6,21 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/Jomsou/Jomsou.github.io.git">
-  <title>使用ARM NEON Intrinsics加速 | Jomsou&#39;s Blog</title>
+  <title>Tag: 随笔 | Jomsou&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ARM NEON技术是ARM Cortex-A系列和Cortex-R52处理器的SIMD（单指令多数据）架构扩展。 NEON技术旨在通过加速音视频编码/解码，用户界面，2D / 3D图形或游戏来改善多媒体用户体验。NEON还可以加速信号处理算法和功能，加快音频和视频处理，语音和面部识别，计算机视觉和深度学习等应用。官方网站为NEON-ARM开发者。 概述NEON技术是一个封装的SIMD架构。NEO">
-<meta name="keywords" content="neon,arm">
-<meta property="og:type" content="article">
-<meta property="og:title" content="使用ARM NEON Intrinsics加速">
-<meta property="og:url" content="https://github.com/Jomsou/Jomsou.github.io.git/2017/07/09/neon/index.html">
+  <meta name="description" content="技术宅男一枚。">
+<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jomsou&#39;s Blog">
+<meta property="og:url" content="https://github.com/Jomsou/Jomsou.github.io.git/tags/随笔/index.html">
 <meta property="og:site_name" content="Jomsou&#39;s Blog">
-<meta property="og:description" content="ARM NEON技术是ARM Cortex-A系列和Cortex-R52处理器的SIMD（单指令多数据）架构扩展。 NEON技术旨在通过加速音视频编码/解码，用户界面，2D / 3D图形或游戏来改善多媒体用户体验。NEON还可以加速信号处理算法和功能，加快音频和视频处理，语音和面部识别，计算机视觉和深度学习等应用。官方网站为NEON-ARM开发者。 概述NEON技术是一个封装的SIMD架构。NEO">
-<meta property="og:image" content="https://github.com/img/neon/Q0.png">
-<meta property="og:updated_time" content="2017-07-16T14:04:29.000Z">
+<meta property="og:description" content="技术宅男一枚。">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用ARM NEON Intrinsics加速">
-<meta name="twitter:description" content="ARM NEON技术是ARM Cortex-A系列和Cortex-R52处理器的SIMD（单指令多数据）架构扩展。 NEON技术旨在通过加速音视频编码/解码，用户界面，2D / 3D图形或游戏来改善多媒体用户体验。NEON还可以加速信号处理算法和功能，加快音频和视频处理，语音和面部识别，计算机视觉和深度学习等应用。官方网站为NEON-ARM开发者。 概述NEON技术是一个封装的SIMD架构。NEO">
-<meta name="twitter:image" content="https://github.com/img/neon/Q0.png">
+<meta name="twitter:title" content="Jomsou&#39;s Blog">
+<meta name="twitter:description" content="技术宅男一枚。">
   
     <link rel="alternative" href="/atom.xml" title="Jomsou&#39;s Blog" type="application/atom+xml">
   
@@ -168,284 +165,60 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-neon" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      使用ARM NEON Intrinsics加速
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/07/20/《明朝那些事儿》那些感受/" class="archive-article-date">
+  	<time datetime="2017-07-20T08:17:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-20</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/07/20/《明朝那些事儿》那些感受/">《明朝那些事儿》那些感受</a>
     </h1>
   
 
-        
-        <a href="/2017/07/09/neon/" class="archive-article-date">
-  	<time datetime="2017-07-09T13:35:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>ARM NEON技术是ARM Cortex-A系列和Cortex-R52处理器的SIMD（单指令多数据）架构扩展。 NEON技术旨在通过加速音视频编码/解码，用户界面，2D / 3D图形或游戏来改善多媒体用户体验。NEON还可以加速信号处理算法和功能，加快音频和视频处理，语音和面部识别，计算机视觉和深度学习等应用。官方网站为<a href="https://developer.arm.com/technologies/neon" target="_blank" rel="external">NEON-ARM开发者</a>。</p>
-<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>NEON技术是一个封装的SIMD架构。NEON寄存器被认为是相同数据类型元素的向量。该技术支持多种数据类型。下表描述了不同架构版本支持的数据类型。</p>
-<table>
-<thead>
-<tr>
-<th>-</th>
-<th>ARMv7-A/R</th>
-<th>ARMv8-A/R</th>
-<th>RMv8-A  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>-</td>
-<td>-</td>
-<td>AArch32</td>
-<td>AArch64</td>
-</tr>
-<tr>
-<td>Floating-point</td>
-<td>32-bit</td>
-<td>16-bit*/32-bit</td>
-<td>16-bit*/32-bit/64-bit</td>
-</tr>
-<tr>
-<td>Integer</td>
-<td>8-bit/16-bit/32-bit</td>
-<td>8-bit/16-bit/32-bit/64-bit</td>
-<td>8-bit/16-bit/32-bit/64-bit</td>
-</tr>
-</tbody>
-</table>
-<a id="more"></a>
-<h2 id="如何使用NEON？"><a href="#如何使用NEON？" class="headerlink" title="如何使用NEON？"></a>如何使用NEON？</h2><p>有关NEON编程的详细信息，可以参考<a href="https://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.den0018a/index.html" target="_blank" rel="external"> NEON Programmers Guide</a>。官网文档需要注册ARM开发者账号才可以下载，所以可以去CSDN<a href="http://download.csdn.net/download/qq_28719969/9426692" target="_blank" rel="external">下载</a>。</p>
-<h2 id="NEON基本知识"><a href="#NEON基本知识" class="headerlink" title="NEON基本知识"></a>NEON基本知识</h2><h4 id="NEON的寄存器"><a href="#NEON的寄存器" class="headerlink" title="NEON的寄存器"></a>NEON的寄存器</h4><ul>
-<li>16个128-bit Q(quadword)寄存器，Q0-Q15.</li>
-<li>32个64-bit D(doubleword)寄存器，D0-D31. (16个64-bit D寄存器 for VFPv3-D16.) <ul>
-<li>D寄存器和Q寄存器的映射关系为:Q<n>为D<2n>和D<2n+1>的组合。</2n+1></2n></n></li>
-</ul>
-</li>
-</ul>
-<p>具体关系如下图所示。<br><img src="/img/neon/Q0.png" alt="image"></p>
-<h4 id="NEON的数据类型"><a href="#NEON的数据类型" class="headerlink" title="NEON的数据类型"></a>NEON的数据类型</h4><table>
-<thead>
-<tr>
-<th>-</th>
-<th>8-bit</th>
-<th>16-bit</th>
-<th>32-bit</th>
-<th>64-bit</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Unsigned integer</td>
-<td>U8</td>
-<td>U16</td>
-<td>U32</td>
-<td>U64</td>
-</tr>
-<tr>
-<td>Signed integer</td>
-<td>S8</td>
-<td>S16</td>
-<td>S32</td>
-<td>S64</td>
-</tr>
-<tr>
-<td>Integer of unspecified type</td>
-<td>I8</td>
-<td>I16</td>
-<td>I32</td>
-<td>I64</td>
-</tr>
-<tr>
-<td>Floating-point number</td>
-<td>not available</td>
-<td>F16</td>
-<td>F32 or F</td>
-<td>not available</td>
-</tr>
-<tr>
-<td>Polynomial over {0,1}</td>
-<td>P8</td>
-<td>P16</td>
-<td>not available</td>
-<td>not available</td>
-</tr>
-</tbody>
-</table>
-<h2 id="NEON-Intrinsics"><a href="#NEON-Intrinsics" class="headerlink" title="NEON Intrinsics"></a>NEON Intrinsics</h2><p>NEON Intrinsics是编译器使用适当的NEON指令或NEON指令序列替换的函数调用。Intrinsics提供与编写汇编语言几乎一样多的指令，但是将寄存器分配给编译器，以便开发人员可以专注于算法。它还可以执行指令调度以消除指定目标处理器的流水线停顿。这样可以开发比使用汇编语言更可维护的源代码。</p>
-<h4 id="NEON-Intrinsics举例"><a href="#NEON-Intrinsics举例" class="headerlink" title="NEON Intrinsics举例"></a>NEON Intrinsics举例</h4><p>原代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">#include &lt;stdio.h&gt;</div><div class="line">#include &lt;arm_neon.h&gt;</div><div class="line">unsigned short int A[] = &#123;1,2,3,4&#125;; // array with 4 elements</div><div class="line">int main(void)</div><div class="line">&#123;</div><div class="line">    for(int i=0;i&lt;4;++i)</div><div class="line">    &#123;</div><div class="line">        A[i]+=A[i];</div><div class="line">    &#125;</div><div class="line">    return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>NEON Intrinsics代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">#include &lt;stdio.h&gt;</div><div class="line">#include &lt;arm_neon.h&gt;</div><div class="line">unsigned short int A[] = &#123;1,2,3,4&#125;; // array with 4 elements</div><div class="line">int main(void)</div><div class="line">&#123;</div><div class="line">    uint16x4_t v; // declare a vector of four 16-bit lanes</div><div class="line">    v = vld1_u16(A); // load the array from memory into a vector</div><div class="line">    v = vadd_u16(v,v); // double each element in the vector</div><div class="line">    vst1_u16(A, v); // store the vector back to memory</div><div class="line">    return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>这个例子中A是无符号短整型数组，ushort为16位，数组长度为4，所以vld1_u16(A) 可以把整个数组load到4通道x16位的向量中,通过vadd_u16使每个通道进行加法，vst1_u16把v中数据存回A中。<br>关于详细的NEON Intrinsics编程信息，可以看这-&gt;<a href="https://developer.arm.com/technologies/neon/intrinsics" target="_blank" rel="external"><strong>ARM NEON Intrinsics参考</strong></a>。</p>
-<h2 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h2><p><a href="http://developer.arm.com/technologies/neon" target="_blank" rel="external">https://developer.arm.com/technologies/neon</a><br><a href="https://developer.arm.com/docs/den0018/latest/neontm-version-10-programmers-guide" target="_blank" rel="external">https://developer.arm.com/docs/den0018/latest/neontm-version-10-programmers-guide</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">neon</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">arm</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://github.com/Jomsou/Jomsou.github.io.git/2017/07/09/neon/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/07/16/livere/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          为Hexo主题yilia添加livere(来必力)评论支持
-        
-      </div>
-    </a>
   
   
-    <a href="/2017/07/09/hexogithub/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">用Hexo在GitHub上搭建个人博客</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概述"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何使用NEON？"><span class="toc-number">2.</span> <span class="toc-text">如何使用NEON？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NEON基本知识"><span class="toc-number">3.</span> <span class="toc-text">NEON基本知识</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#NEON的寄存器"><span class="toc-number">3.0.1.</span> <span class="toc-text">NEON的寄存器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#NEON的数据类型"><span class="toc-number">3.0.2.</span> <span class="toc-text">NEON的数据类型</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NEON-Intrinsics"><span class="toc-number">4.</span> <span class="toc-text">NEON Intrinsics</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#NEON-Intrinsics举例"><span class="toc-number">4.0.1.</span> <span class="toc-text">NEON Intrinsics举例</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料："><span class="toc-number">5.</span> <span class="toc-text">参考资料：</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
-  
-  
-  <!-- ������City�氲װ���� -->
-<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTU0MS82MTA5">
-<script type="text/javascript">
-   (function(d, s) {
-       var j, e = d.getElementsByTagName(s)[0];
-
-       if (typeof LivereTower === 'function') { return; }
-
-       j = d.createElement(s);
-       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-       j.async = true;
-
-       e.parentNode.insertBefore(j, e);
-   })(document, 'script');
-</script>
-<noscript>Ϊ����ʹ�����������۹����뼤��JavaScript</noscript>
-</div>
-<!-- City�氲װ���������� -->
-  
+    </div></section>
   
 
-  
+    
 
 
           </div>
@@ -476,9 +249,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
