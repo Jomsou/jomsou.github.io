@@ -6,19 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/Jomsou/Jomsou.github.io.git">
-  <title>github常见错误提示之一 | Jomsou&#39;s Blog</title>
+  <title>Demo03 仿mac终端 | Jomsou&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="如果输入$ Git remote add origin git@github.com:djqiang（github帐号名）/gitdemo（项目名）.git提示出错信息：fatal: remote origin already exists.">
-<meta name="keywords" content="技术,计算机,github,github错误">
+  <meta name="keywords" content="Demo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="github常见错误提示之一">
-<meta property="og:url" content="https://github.com/Jomsou/Jomsou.github.io.git/2017/07/20/github常见错误提示：fatal-remote-origin-already-exists/index.html">
+<meta property="og:title" content="Demo03 仿mac终端">
+<meta property="og:url" content="https://github.com/Jomsou/Jomsou.github.io.git/2017/07/22/Demo03-仿mac终端/index.html">
 <meta property="og:site_name" content="Jomsou&#39;s Blog">
-<meta property="og:description" content="如果输入$ Git remote add origin git@github.com:djqiang（github帐号名）/gitdemo（项目名）.git提示出错信息：fatal: remote origin already exists.">
-<meta property="og:updated_time" content="2017-07-22T01:34:15.894Z">
+<meta property="og:updated_time" content="2017-07-22T05:46:20.273Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="github常见错误提示之一">
-<meta name="twitter:description" content="如果输入$ Git remote add origin git@github.com:djqiang（github帐号名）/gitdemo（项目名）.git提示出错信息：fatal: remote origin already exists.">
+<meta name="twitter:title" content="Demo03 仿mac终端">
   
     <link rel="alternative" href="/atom.xml" title="Jomsou&#39;s Blog" type="application/atom+xml">
   
@@ -184,61 +181,28 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-github常见错误提示：fatal-remote-origin-already-exists" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Demo03-仿mac终端" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      github常见错误提示之一
+      Demo03 仿mac终端
     </h1>
   
 
         
-        <a href="/2017/07/20/github常见错误提示：fatal-remote-origin-already-exists/" class="archive-article-date">
-  	<time datetime="2017-07-20T12:19:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-20</time>
+        <a href="/2017/07/22/Demo03-仿mac终端/" class="archive-article-date">
+  	<time datetime="2017-07-22T05:45:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>如果输入$ Git remote add origin git@github.com:djqiang（github帐号名）/gitdemo（项目名）.git<br>提示出错信息：fatal: remote origin already exists.<br><a id="more"></a><br>    解决办法如下：</p>
-</blockquote>
-<pre><code>1、先输入$ git remote rm origin
+        <script async src="//jsrun.net/TdYKp/embed/all/light/"></script>
 
-2、再输入$ git remote add origin git@github.com:djqiang/gitdemo.git 就不会报错了！
-
-3、如果输入$ git remote rm origin 还是报错的话，error: Could not remove config section &apos;remote.origin&apos;. 我们需要修改gitconfig文件的内容
-
-4、找到你的github的安装路径，我的是C:\Users\ASUS\AppData\Local\GitHub\PortableGit_ca477551eeb4aea0e4ae9fcd3358bd96720bb5c8\etc
-
-5、找到一个名为gitconfig的文件，打开它把里面的[remote &quot;origin&quot;]那一行删掉就好了！
-</code></pre><blockquote>
-<p>如果输入$ ssh -T git@github.com<br>出现错误提示：Permission denied (publickey).因为新生成的key不能加入ssh就会导致连接不上github。</p>
-</blockquote>
-<pre><code>解决办法如下：
-
-1、先输入$ ssh-agent，再输入$ ssh-add ~/.ssh/id_key，这样就可以了。
-
-2、如果还是不行的话，输入ssh-add ~/.ssh/id_key 命令后出现报错Could not open a connection to your authentication agent.解决方法是key用Git Gui的ssh工具生成，这样生成的时候key就直接保存在ssh中了，不需要再ssh-add命令加入了，其它的user，token等配置都用命令行来做。
-
-3、最好检查一下在你复制id_rsa.pub文件的内容时有没有产生多余的空格或空行，有些编辑器会帮你添加这些的。
-</code></pre><blockquote>
-<p>如果输入$ git push origin master<br>提示出错信息：error:failed to push som refs to …….</p>
-</blockquote>
-<pre><code>解决办法如下：
-
-1、先输入$ git pull origin master //先把远程服务器github上面的文件拉下来
-
-2、再输入$ git push origin master
-
-3、如果出现报错 fatal: Couldn&apos;t find remote ref master或者fatal: &apos;origin&apos; does not appear to be a git repository以及fatal: Could not read from remote repository.
-
-4、则需要重新输入$ git remote add origin git@github.com:djqiang/gitdemo.git
-</code></pre>
       
 
       
@@ -251,19 +215,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">计算机</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">github错误</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Demo</a>
         		</li>
       		
 		</ul>
@@ -319,7 +271,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://github.com/Jomsou/Jomsou.github.io.git/2017/07/20/github常见错误提示：fatal-remote-origin-already-exists/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://github.com/Jomsou/Jomsou.github.io.git/2017/07/22/Demo03-仿mac终端/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -333,18 +285,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2017/07/20/windows8安装msi或exe软件提示2503错误的解决办法/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          windows8安装msi或exe软件提示2503错误的解决办法
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/07/20/《明朝那些事儿》那些感受/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">《明朝那些事儿》那些感受</div>
+    <a href="/2017/07/22/Demo02-新闻焦点轮播/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Demo02 新闻焦点轮播</div>
       <i class="icon-circle-right"></i>
     </a>
   

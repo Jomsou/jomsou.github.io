@@ -6,19 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/Jomsou/Jomsou.github.io.git">
-  <title>github常见错误提示之一 | Jomsou&#39;s Blog</title>
+  <title>Jomsou&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="如果输入$ Git remote add origin git@github.com:djqiang（github帐号名）/gitdemo（项目名）.git提示出错信息：fatal: remote origin already exists.">
-<meta name="keywords" content="技术,计算机,github,github错误">
-<meta property="og:type" content="article">
-<meta property="og:title" content="github常见错误提示之一">
-<meta property="og:url" content="https://github.com/Jomsou/Jomsou.github.io.git/2017/07/20/github常见错误提示：fatal-remote-origin-already-exists/index.html">
+  <meta name="description" content="技术宅男一枚。">
+<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jomsou&#39;s Blog">
+<meta property="og:url" content="https://github.com/Jomsou/Jomsou.github.io.git/page/2/index.html">
 <meta property="og:site_name" content="Jomsou&#39;s Blog">
-<meta property="og:description" content="如果输入$ Git remote add origin git@github.com:djqiang（github帐号名）/gitdemo（项目名）.git提示出错信息：fatal: remote origin already exists.">
-<meta property="og:updated_time" content="2017-07-22T01:34:15.894Z">
+<meta property="og:description" content="技术宅男一枚。">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="github常见错误提示之一">
-<meta name="twitter:description" content="如果输入$ Git remote add origin git@github.com:djqiang（github帐号名）/gitdemo（项目名）.git提示出错信息：fatal: remote origin already exists.">
+<meta name="twitter:title" content="Jomsou&#39;s Blog">
+<meta name="twitter:description" content="技术宅男一枚。">
   
     <link rel="alternative" href="/atom.xml" title="Jomsou&#39;s Blog" type="application/atom+xml">
   
@@ -184,61 +183,38 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-github常见错误提示：fatal-remote-origin-already-exists" class="article article-type-post " itemscope itemprop="blogPost">
+            
+  
+    <article id="post-livere" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      github常见错误提示之一
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/16/livere/">为Hexo主题yilia添加livere(来必力)评论支持</a>
     </h1>
   
 
         
-        <a href="/2017/07/20/github常见错误提示：fatal-remote-origin-already-exists/" class="archive-article-date">
-  	<time datetime="2017-07-20T12:19:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-20</time>
+        <a href="/2017/07/16/livere/" class="archive-article-date">
+  	<time datetime="2017-07-15T16:46:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>如果输入$ Git remote add origin git@github.com:djqiang（github帐号名）/gitdemo（项目名）.git<br>提示出错信息：fatal: remote origin already exists.<br><a id="more"></a><br>    解决办法如下：</p>
-</blockquote>
-<pre><code>1、先输入$ git remote rm origin
-
-2、再输入$ git remote add origin git@github.com:djqiang/gitdemo.git 就不会报错了！
-
-3、如果输入$ git remote rm origin 还是报错的话，error: Could not remove config section &apos;remote.origin&apos;. 我们需要修改gitconfig文件的内容
-
-4、找到你的github的安装路径，我的是C:\Users\ASUS\AppData\Local\GitHub\PortableGit_ca477551eeb4aea0e4ae9fcd3358bd96720bb5c8\etc
-
-5、找到一个名为gitconfig的文件，打开它把里面的[remote &quot;origin&quot;]那一行删掉就好了！
-</code></pre><blockquote>
-<p>如果输入$ ssh -T git@github.com<br>出现错误提示：Permission denied (publickey).因为新生成的key不能加入ssh就会导致连接不上github。</p>
-</blockquote>
-<pre><code>解决办法如下：
-
-1、先输入$ ssh-agent，再输入$ ssh-add ~/.ssh/id_key，这样就可以了。
-
-2、如果还是不行的话，输入ssh-add ~/.ssh/id_key 命令后出现报错Could not open a connection to your authentication agent.解决方法是key用Git Gui的ssh工具生成，这样生成的时候key就直接保存在ssh中了，不需要再ssh-add命令加入了，其它的user，token等配置都用命令行来做。
-
-3、最好检查一下在你复制id_rsa.pub文件的内容时有没有产生多余的空格或空行，有些编辑器会帮你添加这些的。
-</code></pre><blockquote>
-<p>如果输入$ git push origin master<br>提示出错信息：error:failed to push som refs to …….</p>
-</blockquote>
-<pre><code>解决办法如下：
-
-1、先输入$ git pull origin master //先把远程服务器github上面的文件拉下来
-
-2、再输入$ git push origin master
-
-3、如果出现报错 fatal: Couldn&apos;t find remote ref master或者fatal: &apos;origin&apos; does not appear to be a git repository以及fatal: Could not read from remote repository.
-
-4、则需要重新输入$ git remote add origin git@github.com:djqiang/gitdemo.git
-</code></pre>
+        <p>在使用yilia主题后，想添加评论功能，然而主题自带的第三方评论对我来说都用不了，多说关了，网易云跟帖也要关了，畅言必须进行域名备案，github page使用不了。在这种情况下，我找到了livere。</p>
+<h2 id="注册-livere"><a href="#注册-livere" class="headerlink" title="注册 livere"></a>注册 livere</h2><p><a href="https://livere.com/" target="_blank" rel="external">livere</a> 有两个版本：</p>
+<ul>
+<li>City 版：是一款适合所有人使用的免费版本</li>
+<li>Premium 版：是一款能够帮助企业实现自动化管理的多功能收费版本</li>
+</ul>
+<p>使用City版可以满足基本需求了。<br>安装，获取livere安装代码：<a href="https://livere.com/insight/myCode。" target="_blank" rel="external">https://livere.com/insight/myCode。</a><br>
+        
+          
+        
       
 
       
@@ -259,11 +235,15 @@ var _hmt = _hmt || [];
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">github错误</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">livere</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">来必力</a>
         		</li>
       		
 		</ul>
@@ -272,84 +252,16 @@ var _hmt = _hmt || [];
       
 
       
-
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/16/livere/">展开全文 >></a>
+        </p>
       
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
 
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://github.com/Jomsou/Jomsou.github.io.git/2017/07/20/github常见错误提示：fatal-remote-origin-already-exists/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/07/20/windows8安装msi或exe软件提示2503错误的解决办法/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          windows8安装msi或exe软件提示2503错误的解决办法
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2017/07/20/《明朝那些事儿》那些感受/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">《明朝那些事儿》那些感受</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -364,49 +276,232 @@ var _hmt = _hmt || [];
         </div>
         
         
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    目录，不存在的…
-                    </div>
-                </span>
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-neon" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/09/neon/">使用ARM NEON Intrinsics加速</a>
+    </h1>
+  
+
+        
+        <a href="/2017/07/09/neon/" class="archive-article-date">
+  	<time datetime="2017-07-09T13:35:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>ARM NEON技术是ARM Cortex-A系列和Cortex-R52处理器的SIMD（单指令多数据）架构扩展。 NEON技术旨在通过加速音视频编码/解码，用户界面，2D / 3D图形或游戏来改善多媒体用户体验。NEON还可以加速信号处理算法和功能，加快音频和视频处理，语音和面部识别，计算机视觉和深度学习等应用。官方网站为<a href="https://developer.arm.com/technologies/neon" target="_blank" rel="external">NEON-ARM开发者</a>。</p>
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>NEON技术是一个封装的SIMD架构。NEON寄存器被认为是相同数据类型元素的向量。该技术支持多种数据类型。下表描述了不同架构版本支持的数据类型。</p>
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>ARMv7-A/R</th>
+<th>ARMv8-A/R</th>
+<th>RMv8-A  </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>AArch32</td>
+<td>AArch64</td>
+</tr>
+<tr>
+<td>Floating-point</td>
+<td>32-bit</td>
+<td>16-bit*/32-bit</td>
+<td>16-bit*/32-bit/64-bit</td>
+</tr>
+<tr>
+<td>Integer</td>
+<td>8-bit/16-bit/32-bit</td>
+<td>8-bit/16-bit/32-bit/64-bit</td>
+<td>8-bit/16-bit/32-bit/64-bit</td>
+</tr>
+</tbody>
+</table>
+        
+          
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">硬件</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">neon</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">arm</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/09/neon/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
             </div>
         </div>
+        
         
     </div>
 </aside>
 
 
 
-  
-  
-  
-  
-  <!-- ������City�氲װ���� -->
-<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTU0MS82MTA5">
-<script type="text/javascript">
-   (function(d, s) {
-       var j, e = d.getElementsByTagName(s)[0];
 
-       if (typeof LivereTower === 'function') { return; }
-
-       j = d.createElement(s);
-       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-       j.async = true;
-
-       e.parentNode.insertBefore(j, e);
-   })(document, 'script');
-</script>
-<noscript>Ϊ����ʹ�����������۹����뼤��JavaScript</noscript>
-</div>
-<!-- City�氲װ���������� -->
   
+    <article id="post-hexogithub" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/09/hexogithub/">用Hexo在GitHub上搭建个人博客</a>
+    </h1>
   
 
+        
+        <a href="/2017/07/09/hexogithub/" class="archive-article-date">
+  	<time datetime="2017-07-09T06:09:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>我用Hexo在GitHub上搭建好了自己的博客，我的这第一篇博客就来说说搭建的过程。</p>
+<h2 id="1-环境配置"><a href="#1-环境配置" class="headerlink" title="1 环境配置"></a>1 环境配置</h2><p>本文使用环境如下：</p>
+<ul>
+<li>Windows 10</li>
+<li>node.js v8.1.3</li>
+<li>git v2.13.2</li>
+<li>npm v5.0.3</li>
+<li>hexo v3.3.7<h3 id="1-1-node-js安装"><a href="#1-1-node-js安装" class="headerlink" title="1.1 node.js安装"></a>1.1 node.js安装</h3>可以去<a href="https://nodejs.org/en/?_blank" target="_blank" rel="external">Nodejs官网</a>下载，如果下载速度不行，可以去<a href="https://nodejs.cn/?_blank" target="_blank" rel="external">Nodejs中文网</a>下载。下载完后直接运行安装即可，会默认把nodejs加入环境变量中，可以通过node -v查看是否安装成功。新版本nodejs已经集成了npm,同样使用npm -v来查看是否安装成功。<h3 id="1-2-git安装"><a href="#1-2-git安装" class="headerlink" title="1.2 git安装"></a>1.2 git安装</h3>地址：<a href="https://git-for-windows.github.io/?_blank" target="_blank" rel="external">git for windows</a>。    </li>
+</ul>
+        
+          
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">计算机</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/09/hexogithub/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </nav>
   
 
 
@@ -437,8 +532,8 @@ var _hmt = _hmt || [];
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: false,
-		isPost: true,
+		isHome: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
