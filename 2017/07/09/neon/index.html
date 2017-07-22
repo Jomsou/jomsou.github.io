@@ -9,14 +9,14 @@
   <title>使用ARM NEON Intrinsics加速 | Jomsou&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="ARM NEON技术是ARM Cortex-A系列和Cortex-R52处理器的SIMD（单指令多数据）架构扩展。 NEON技术旨在通过加速音视频编码/解码，用户界面，2D / 3D图形或游戏来改善多媒体用户体验。NEON还可以加速信号处理算法和功能，加快音频和视频处理，语音和面部识别，计算机视觉和深度学习等应用。官方网站为NEON-ARM开发者。 概述NEON技术是一个封装的SIMD架构。NEO">
-<meta name="keywords" content="neon,arm">
+<meta name="keywords" content="技术,硬件,neon,arm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用ARM NEON Intrinsics加速">
 <meta property="og:url" content="https://github.com/Jomsou/Jomsou.github.io.git/2017/07/09/neon/index.html">
 <meta property="og:site_name" content="Jomsou&#39;s Blog">
 <meta property="og:description" content="ARM NEON技术是ARM Cortex-A系列和Cortex-R52处理器的SIMD（单指令多数据）架构扩展。 NEON技术旨在通过加速音视频编码/解码，用户界面，2D / 3D图形或游戏来改善多媒体用户体验。NEON还可以加速信号处理算法和功能，加快音频和视频处理，语音和面部识别，计算机视觉和深度学习等应用。官方网站为NEON-ARM开发者。 概述NEON技术是一个封装的SIMD架构。NEO">
 <meta property="og:image" content="https://github.com/img/neon/Q0.png">
-<meta property="og:updated_time" content="2017-07-16T14:04:29.000Z">
+<meta property="og:updated_time" content="2017-07-22T01:33:28.444Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用ARM NEON Intrinsics加速">
 <meta name="twitter:description" content="ARM NEON技术是ARM Cortex-A系列和Cortex-R52处理器的SIMD（单指令多数据）架构扩展。 NEON技术旨在通过加速音视频编码/解码，用户界面，2D / 3D图形或游戏来改善多媒体用户体验。NEON还可以加速信号处理算法和功能，加快音频和视频处理，语音和面部识别，计算机视觉和深度学习等应用。官方网站为NEON-ARM开发者。 概述NEON技术是一个封装的SIMD架构。NEO">
@@ -73,9 +73,13 @@ var _hmt = _hmt || [];
 			
 				<li><a href="/">主页</a></li>
 	        
+				<li><a href="/tags/技术/">技术</a></li>
+	        
 				<li><a href="/tags/随笔/">随笔</a></li>
 	        
-				<li><a href="/Demo_projects/demo01/">Demo</a></li>
+				<li><a href="/tags/生活/">生活</a></li>
+	        
+				<li><a href="/tags/demo/">Demo</a></li>
 	        
 				<li><a href="/aboutme/">About Me</a></li>
 	        
@@ -135,6 +139,10 @@ var _hmt = _hmt || [];
 			
 				
 			
+				
+			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -153,13 +161,17 @@ var _hmt = _hmt || [];
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 25%"><a href="/">主页</a></li>
+					<li style="width: 16.666666666666668%"><a href="/">主页</a></li>
 		        
-					<li style="width: 25%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 16.666666666666668%"><a href="/tags/技术/">技术</a></li>
 		        
-					<li style="width: 25%"><a href="/Demo_projects/demo01/">Demo</a></li>
+					<li style="width: 16.666666666666668%"><a href="/tags/随笔/">随笔</a></li>
 		        
-					<li style="width: 25%"><a href="/aboutme/">About Me</a></li>
+					<li style="width: 16.666666666666668%"><a href="/tags/生活/">生活</a></li>
+		        
+					<li style="width: 16.666666666666668%"><a href="/tags/demo/">Demo</a></li>
+		        
+					<li style="width: 16.666666666666668%"><a href="/aboutme/">About Me</a></li>
 		        
 				</ul>
 			</nav>
@@ -302,6 +314,14 @@ var _hmt = _hmt || [];
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">硬件</a>
+        		</li>
+      		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">neon</a>
         		</li>
@@ -558,6 +578,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">技术</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">计算机</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
              
@@ -566,15 +598,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">livere</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">来必力</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">硬件</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -602,7 +634,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">开源，书籍，编程</a>
+                <a href="javascript:void(0)" class="js-tag color3">开源</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">书籍</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">编程</a>
               </li>
             
             <div class="clearfix"></div>
