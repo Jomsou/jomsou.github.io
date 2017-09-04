@@ -6,18 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/Jomsou/Jomsou.github.io.git">
-  <title>Tag: 技术 | Jomsou&#39;s Blog</title>
+  <title>CSS盒子模型 | Jomsou&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="技术宅男一枚。">
-<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Jomsou&#39;s Blog">
-<meta property="og:url" content="https://github.com/Jomsou/Jomsou.github.io.git/tags/技术/index.html">
+  <meta name="description" content="目录： CSS 盒子模型（Box Model） CSS 边框 CSS 轮廓 CSS Margin(外边距) CSS Padding（填充）">
+<meta name="keywords" content="技术,计算机,web前端,CSS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS盒子模型">
+<meta property="og:url" content="https://github.com/Jomsou/Jomsou.github.io.git/2017/07/26/CSS盒子模型/index.html">
 <meta property="og:site_name" content="Jomsou&#39;s Blog">
-<meta property="og:description" content="技术宅男一枚。">
+<meta property="og:description" content="目录： CSS 盒子模型（Box Model） CSS 边框 CSS 轮廓 CSS Margin(外边距) CSS Padding（填充）">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1599190-02fad1cef876ab73.gif?imageMogr2/auto-orient/strip">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1599190-6ba58abc275daa5a.gif?imageMogr2/auto-orient/strip">
+<meta property="og:updated_time" content="2017-07-27T07:45:45.505Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Jomsou&#39;s Blog">
-<meta name="twitter:description" content="技术宅男一枚。">
+<meta name="twitter:title" content="CSS盒子模型">
+<meta name="twitter:description" content="目录： CSS 盒子模型（Box Model） CSS 边框 CSS 轮廓 CSS Margin(外边距) CSS Padding（填充）">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1599190-02fad1cef876ab73.gif?imageMogr2/auto-orient/strip">
   
     <link rel="alternative" href="/atom.xml" title="Jomsou&#39;s Blog" type="application/atom+xml">
   
@@ -183,36 +187,359 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-CSS盒子模型" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      CSS盒子模型
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/26/CSS盒子模型/" class="archive-article-date">
+
+        
+        <a href="/2017/07/26/CSS盒子模型/" class="archive-article-date">
   	<time datetime="2017-07-26T11:40:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-26</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/26/CSS盒子模型/">CSS盒子模型</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="目录："><a href="#目录：" class="headerlink" title="目录："></a>目录：</h3><ul>
+<li>CSS 盒子模型（Box Model）</li>
+<li>CSS 边框</li>
+<li>CSS 轮廓</li>
+<li>CSS Margin(外边距)</li>
+<li>CSS Padding（填充）<a id="more"></a>
+</li>
+</ul>
+<h3 id="CSS-盒子模型-Box-Model"><a href="#CSS-盒子模型-Box-Model" class="headerlink" title="CSS 盒子模型(Box Model)"></a>CSS 盒子模型(Box Model)</h3><blockquote>
+<p>所有HTML元素可以看作盒子，在CSS中，”box model”这一术语是用来设计和布局时使用。</p>
+</blockquote>
+<p>CSS盒模型本质上是一个盒子，封装周围的HTML元素，它包括：边距，边框，填充，和实际内容。<br>盒模型允许我们在其它元素和周围元素边框之间的空间放置元素。<br>下面的图片说明了盒子模型(Box Model)：<br><img src="http://upload-images.jianshu.io/upload_images/1599190-02fad1cef876ab73.gif?imageMogr2/auto-orient/strip" alt=""><br>不同部分的说明：</p>
+<pre><code>Margin(外边距) - 清除边框外的区域，外边距是透明的。
+Border(边框) - 围绕在内边距和内容外的边框。
+Padding(内边距) - 清除内容周围的区域，内边距是透明的。
+Content(内容) - 盒子的内容，显示文本和图像。
+</code></pre><p>为了在所有浏览器中的元素的宽度和高度设置正确的话，你需要知道的盒模型是如何工作的。</p>
+<h5 id="元素的宽度和高度"><a href="#元素的宽度和高度" class="headerlink" title="元素的宽度和高度"></a>元素的宽度和高度</h5><p><strong>重要:</strong> 当您指定一个CSS元素的宽度和高度属性时，你只是设置内容区域的宽度和高度。要知道，完全大小的元素，你还必须添加填充，边框和边距。<br>下面的例子中的元素的总宽度为300px：</p>
+<pre>div {
+    width: 300px;
+    border: 25px solid green;
+    padding: 25px;
+    margin: 25px;
+}</pre>
+让我们自己算算：
+<pre>300px (宽)
++ 50px (左 + 右填充)
++ 50px (左 + 右边框)
++ 50px (左 + 右边距)
+= 450px</pre>
 
-        <div class="article-info info-on-right">
-          
+<p>最终元素的总宽度计算公式是这样的：<br>总元素的宽度=宽度+左填充+右填充+左边框+右边框+左边距+右边距<br>元素的总高度最终计算公式是这样的：<br>总元素的高度=高度+顶部填充+底部填充+上边框+下边框+上边距+下边距</p>
+<h5 id="浏览器的兼容性问题"><a href="#浏览器的兼容性问题" class="headerlink" title="浏览器的兼容性问题"></a>浏览器的兼容性问题</h5><blockquote>
+<p>一旦为页面设置了恰当的 DTD，大多数浏览器都会按照上面的图示来呈现内容。然而 IE 5 和 6 的呈现却是不正确的。根据 W3C 的规范，元素内容占据的空间是由 width 属性设置的，而内容周围的 padding 和 border 值是另外计算的。不幸的是，IE5.X 和 6 在怪异模式中使用自己的非标准模型。这些浏览器的 width 属性不是内容的宽度，而是内容、内边距和边框的宽度的总和。</p>
+</blockquote>
+<p><em><strong>虽然有方法解决这个问题。但是目前最好的解决方案是回避这个问题。也就是，不要给元素添加具有指定宽度的内边距，而是尝试将内边距或外边距添加到元素的父元素和子元素。</strong></em></p>
+<blockquote>
+<p>IE8 及更早IE版本不支持 填充的宽度和边框的宽度属性设。<br>解决IE8及更早版本不兼容问题可以在HTML页面声明 &lt;!DOCTYPE html&gt;即可。</p>
+</blockquote>
+<h3 id="CSS边框"><a href="#CSS边框" class="headerlink" title="CSS边框"></a>CSS边框</h3><h4 id="border-style"><a href="#border-style" class="headerlink" title="border-style"></a>border-style</h4><table>
+<thead>
+<tr>
+<th>border-style</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>none</td>
+<td>默认无边框</td>
+</tr>
+<tr>
+<td>dotted</td>
+<td>定义一个点线边框</td>
+</tr>
+<tr>
+<td>dashed</td>
+<td>定义一个虚线边框</td>
+</tr>
+<tr>
+<td>solid</td>
+<td>定义实线边框</td>
+</tr>
+<tr>
+<td>double</td>
+<td>定义两个边框。 两个边框的宽度和 border-width 的值相同</td>
+</tr>
+<tr>
+<td>groove</td>
+<td>定义3D沟槽边框。效果取决于边框的颜色值</td>
+</tr>
+<tr>
+<td>ridge</td>
+<td>定义3D脊边框。效果取决于边框的颜色值</td>
+</tr>
+<tr>
+<td>inset:</td>
+<td>定义一个3D的嵌入边框。效果取决于边框的颜色值</td>
+</tr>
+<tr>
+<td>outset</td>
+<td>定义一个3D突出边框。 效果取决于边框的颜色值</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述 </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>border</td>
+<td>简写属性，用于把针对四个边的属性设置在一个声明。</td>
+</tr>
+<tr>
+<td>border-style</td>
+<td>用于设置元素所有边框的样式，或者单独地为各边设置边框样式。 </td>
+</tr>
+<tr>
+<td>border-width</td>
+<td>简写属性，用于为元素的所有边框设置宽度，或者单独地为各边边框设置宽度。</td>
+</tr>
+<tr>
+<td>border-color</td>
+<td>简写属性，设置元素的所有边框中可见部分的颜色，或为 4 个边分别设置颜色。</td>
+</tr>
+<tr>
+<td>border-bottom</td>
+<td>简写属性，用于把下边框的所有属性设置到一个声明中。</td>
+</tr>
+<tr>
+<td>border-bottom-color</td>
+<td>设置元素的下边框的颜色。</td>
+</tr>
+<tr>
+<td>border-bottom-style</td>
+<td>设置元素的下边框的样式。</td>
+</tr>
+<tr>
+<td>border-bottom-width</td>
+<td>设置元素的下边框的宽度。</td>
+</tr>
+<tr>
+<td>border-left</td>
+<td>简写属性，用于把左边框的所有属性设置到一个声明中。</td>
+</tr>
+<tr>
+<td>border-left-color</td>
+<td>设置元素的左边框的颜色。</td>
+</tr>
+<tr>
+<td>border-left-style</td>
+<td>设置元素的左边框的样式。</td>
+</tr>
+<tr>
+<td>border-left-width</td>
+<td>设置元素的左边框的宽度。</td>
+</tr>
+<tr>
+<td>border-right</td>
+<td>简写属性，用于把右边框的所有属性设置到一个声明中。</td>
+</tr>
+<tr>
+<td>border-right-color</td>
+<td>设置元素的右边框的颜色。</td>
+</tr>
+<tr>
+<td>border-right-style</td>
+<td>设置元素的右边框的样式。</td>
+</tr>
+<tr>
+<td>border-right-width</td>
+<td>设置元素的右边框的宽度。</td>
+</tr>
+<tr>
+<td>border-top</td>
+<td>简写属性，用于把上边框的所有属性设置到一个声明中。</td>
+</tr>
+<tr>
+<td>border-top-color</td>
+<td>设置元素的上边框的颜色。</td>
+</tr>
+<tr>
+<td>border-top-style</td>
+<td>设置元素的上边框的样式。</td>
+</tr>
+<tr>
+<td>border-top-width</td>
+<td>设置元素的上边框的宽度。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="CSS-轮廓（outline）"><a href="#CSS-轮廓（outline）" class="headerlink" title="CSS 轮廓（outline）"></a>CSS 轮廓（outline）</h3><blockquote>
+<p>轮廓（outline）是绘制于元素周围的一条线，位于边框边缘的外围，可起到突出元素的作用。<br>CSS outline 属性规定元素轮廓的样式、颜色和宽度。</p>
+</blockquote>
+<p><img src="http://upload-images.jianshu.io/upload_images/1599190-6ba58abc275daa5a.gif?imageMogr2/auto-orient/strip" alt=""><br>所有CSS 轮廓（outline）属性<br>“CSS” 列中的数字表示哪个CSS版本定义了该属性(CSS1 或者CSS2)。</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>值</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>outline</td>
+<td>在一个声明中设置所有的轮廓属性</td>
+<td><em>outline-color<br>outline-style<br>outline-width<br> </em>inherit</td>
+<td>2</td>
+</tr>
+<tr>
+<td>outline-color</td>
+<td>设置轮廓的颜色</td>
+<td><em>color-name<br> hex-number <br>rgb-number<br> invert<br> </em>inherit</td>
+<td>2</td>
+</tr>
+<tr>
+<td>outline-style</td>
+<td>设置轮廓的样式</td>
+<td><em>none<br> dotted<br> dashed<br> solid<br>double<br> groove<br> ridge<br> inset<br> outset<br> </em>inherit</td>
+<td>2</td>
+</tr>
+<tr>
+<td>outline-width</td>
+<td>设置轮廓的宽度</td>
+<td>thin<br> medium<br> thick<br> <em>length<br> </em>inherit</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="CSS-Margin-外边距"><a href="#CSS-Margin-外边距" class="headerlink" title="CSS Margin(外边距)"></a>CSS Margin(外边距)</h3><blockquote>
+<p>CSS Margin(外边距)属性定义元素周围的空间。</p>
+</blockquote>
+<p><em><b>Margin</b></em>  清除周围的元素（外边框）的区域。margin没有背景颜色，是完全透明的。可以单独改变元素的上，下，左，右边距。也可以一次改变所有的属性。</p>
+<h5 id="可能的值"><a href="#可能的值" class="headerlink" title="可能的值"></a><em>可能的值</em></h5><table>
+<thead>
+<tr>
+<th>值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>auto</td>
+<td>设置浏览器边距。这样做的结果会依赖于浏览器</td>
+</tr>
+<tr>
+<td>length</td>
+<td>定义一个固定的margin（使用像素，pt，em等）</td>
+</tr>
+<tr>
+<td>%</td>
+<td>定义一个使用百分比的边距</td>
+</tr>
+</tbody>
+</table>
+<h5 id="所有的CSS边距属性"><a href="#所有的CSS边距属性" class="headerlink" title="所有的CSS边距属性"></a><em>所有的CSS边距属性</em></h5><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>margin</td>
+<td>简写属性。在一个声明中设置所有外边距属性。（顺序：上右下左）</td>
+</tr>
+<tr>
+<td>margin-bottom</td>
+<td>设置元素的下外边距。</td>
+</tr>
+<tr>
+<td>margin-left</td>
+<td>设置元素的左外边距。</td>
+</tr>
+<tr>
+<td>margin-right</td>
+<td>设置元素的右外边距。</td>
+</tr>
+<tr>
+<td>margin-top</td>
+<td>设置元素的上外边距。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="CSS-Padding（填充）"><a href="#CSS-Padding（填充）" class="headerlink" title="CSS Padding（填充）"></a>CSS Padding（填充）</h3><p><em><b>Padding（填充）</b></em>   当元素的 Padding（填充）（内边距）被清除时，所”释放”的区域将会受到元素背景颜色的填充。</p>
+<blockquote>
+<p>单独使用填充属性可以改变上下左右的填充。缩写填充属性也可以使用，一旦改变一切都改变。</p>
+</blockquote>
+<p><em><b>可能的值</b></em></p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>length</td>
+<td>定义一个固定的填充(像素, pt, em,等)</td>
+</tr>
+<tr>
+<td>%</td>
+<td>使用百分比值定义一个填充</td>
+</tr>
+</tbody>
+</table>
+<p><em><b>所有的CSS填充属性</b></em></p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>padding</td>
+<td>使用缩写属性设置在一个声明中的所有填充属性（顺序：上右下左）</td>
+</tr>
+<tr>
+<td>padding-bottom</td>
+<td>设置元素的底部填充</td>
+</tr>
+<tr>
+<td>padding-left</td>
+<td>设置元素的左部填充</td>
+</tr>
+<tr>
+<td>padding-right</td>
+<td>设置元素的右部填充</td>
+</tr>
+<tr>
+<td>padding-top</td>
+<td>设置元素的顶部填充</td>
+</tr>
+</tbody>
+</table>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -236,369 +563,136 @@ var _hmt = _hmt || [];
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://github.com/Jomsou/Jomsou.github.io.git/2017/07/26/CSS盒子模型/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/25/CSS学习总结/" class="archive-article-date">
-  	<time datetime="2017-07-25T11:40:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-25</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/07/25/CSS学习总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS学习总结</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/25/CSS学习总结/">CSS学习总结</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">计算机</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">web前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#目录："><span class="toc-number">1.</span> <span class="toc-text">目录：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS-盒子模型-Box-Model"><span class="toc-number">2.</span> <span class="toc-text">CSS 盒子模型(Box Model)</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#元素的宽度和高度"><span class="toc-number">2.0.1.</span> <span class="toc-text">元素的宽度和高度</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#浏览器的兼容性问题"><span class="toc-number">2.0.2.</span> <span class="toc-text">浏览器的兼容性问题</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS边框"><span class="toc-number">3.</span> <span class="toc-text">CSS边框</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#border-style"><span class="toc-number">3.1.</span> <span class="toc-text">border-style</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS-轮廓（outline）"><span class="toc-number">4.</span> <span class="toc-text">CSS 轮廓（outline）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS-Margin-外边距"><span class="toc-number">5.</span> <span class="toc-text">CSS Margin(外边距)</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#可能的值"><span class="toc-number">5.0.1.</span> <span class="toc-text">可能的值</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#所有的CSS边距属性"><span class="toc-number">5.0.2.</span> <span class="toc-text">所有的CSS边距属性</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS-Padding（填充）"><span class="toc-number">6.</span> <span class="toc-text">CSS Padding（填充）</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/25/CSS组合选择符/" class="archive-article-date">
-  	<time datetime="2017-07-25T11:40:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-25</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/25/CSS组合选择符/">CSS组合选择符</a>
-    </h1>
+  
+  
+  <!-- ������City�氲װ���� -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTU0MS82MTA5">
+<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+</script>
+<noscript>Ϊ����ʹ�����������۹����뼤��JavaScript</noscript>
+</div>
+<!-- City�氲װ��������� -->
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">计算机</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">web前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/20/windows8安装msi或exe软件提示2503错误的解决办法/" class="archive-article-date">
-  	<time datetime="2017-07-20T12:35:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/20/windows8安装msi或exe软件提示2503错误的解决办法/">windows8安装msi或exe软件提示2503错误的解决办法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">计算机</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算机技巧</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">软件安装</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/20/前端技术之小总结/" class="archive-article-date">
-  	<time datetime="2017-07-20T06:38:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/20/前端技术之小总结/">前端技术之小总结</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">计算机</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">web前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/16/livere/" class="archive-article-date">
-  	<time datetime="2017-07-15T16:46:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/16/livere/">为Hexo主题yilia添加livere(来必力)评论支持</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">计算机</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">livere</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">来必力</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/09/neon/" class="archive-article-date">
-  	<time datetime="2017-07-09T13:35:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/09/neon/">使用ARM NEON Intrinsics加速</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">硬件</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">neon</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">arm</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/09/hexogithub/" class="archive-article-date">
-  	<time datetime="2017-07-09T06:09:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/09/hexogithub/">用Hexo在GitHub上搭建个人博客</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">计算机</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -629,9 +723,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
